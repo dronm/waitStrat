@@ -3,7 +3,8 @@ Several strategies should be defined on construction. Every strategy includes ma
 On failur wait interval can be fetched with *NextWait()* function. For example *time.Sleep(time.Duration(WaitStrategys.NextWait()) * time.Millisecond)*<br/>
 Zero try count means endlees try.<br/>
 ```golang
-import "waitStrat"
+import "github.com/dronm/waitStrat"
+
 reconParams =: waitStrat.WaitStrategy{
 	Strategies: []waitStrat.WaitStrategyValues{
 		waitStrat.WaitStrategyValues{10,1000},  // first attempt, try 10 times with 1000 wait value
